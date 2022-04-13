@@ -874,7 +874,9 @@ video:focus {
   height: 100%;
   font-size: 25px;
   padding: 7% !important;
-  background-color: #060dcfc7;
+/*  background-color: #060dcfc7;
+*/  
+  background-color: #f51b55;
   color: white;
 }
 
@@ -886,5 +888,5 @@ video:focus {
 }
 
 .pdf_link a {
-  color: #060dcfc7;
+  color: #f51b55;
 }
