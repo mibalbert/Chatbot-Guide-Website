@@ -27,15 +27,13 @@ function createChart(
     // Once you have the element or context, instantiate the chart-type by passing the configuration,
     // for more info. refer: https://www.chartjs.org/docs/latest/configuration/
     const data = {
-        labels,
-        datasets: [
-            {
-                label: title,
-                backgroundColor,
-                data: chartsData,
-                fill: false,
-            },
-        ],
+        labels: labels,
+        datasets: [{
+            label: "Grade",
+            backgroundColor: backgroundColor,
+            data: Array.from(chartsData),
+            fill: false
+        }]
     };
     const options = {
         title: {
@@ -51,13 +49,20 @@ function createChart(
             },
         },
         legend: {
-            display: displayLegend,
+            display: true,
             position: "right",
             labels: {
-                boxWidth: 5,
+                boxWidth: 0,
                 fontSize: 10,
             },
         },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
     };
 
     // draw the chart by passing the configuration
@@ -104,7 +109,7 @@ function createChartinModal(
         labels,
         datasets: [
             {
-                label: title,
+                label: "Grade",
                 backgroundColor,
                 data: chartsData,
                 fill: false,
@@ -127,7 +132,18 @@ function createChartinModal(
         legend: {
             display: displayLegend,
             position: "right",
+            labels: {
+                boxWidth: 0,
+                fontSize: 10,
+            }
         },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
     };
 
     // eslint-disable-next-line no-undef
