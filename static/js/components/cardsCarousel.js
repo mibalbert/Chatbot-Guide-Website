@@ -1,17 +1,35 @@
+
 /**
  * creates horizontally placed cards carousel
  * @param {Array} cardsData json array
  */
 function createCardsCarousel(cardsData) {
     let cards = "";
+    const colors = {
+        red: "81, 212, 229",
+        green: "81, 212, 229",
+        blue: "81, 212, 229"
+    }
+    const keys = Object.keys(colors);
     cardsData.map((card_item) => {
-        const item = `<div class="carousel_cards in-left">
-    <img class="cardBackgroundImage" src=${card_item.image}>
-    <div class="cardFooter"> <span class="cardTitle" title="abc">${card_item.title}</span>
-    <div class="cardDescription"><span class="cardDescription">${card_item.description}</span></div></div></div>`;
+        const item = `
+        <div class="carousel_cards in-left">
+            
+            <div class="cardFooter"> 
+                <p class="cardTitle" style="background-color: rgba(${colors[keys[keys.length * Math.random() << 0]]}, .9)" title="abc">${card_item.title}</p>
+                <div class="cardDescription">
+                    <p class="cardDescription__item">${card_item.description.date}</p>
+                    <p class="cardDescription__item">${card_item.description.time}</p>
+                    <p class="cardDescription__item">${card_item.description.title}</p>
+                    <p class="cardDescription__item">${card_item.description.room}</p>
+                    <p class="cardDescription__item">${card_item.description.lecturer}</p>
+                    <p class="cardDescription__item">${card_item.description.building}</p>
+                </div>
+            </div>
+        </div>`;
         cards += item;
     });
-    const cardContents = `<div id="paginated_cards" class="cards"> <div class="cards_scroller">${cards} <span class="arrow prev fa fa-chevron-circle-left "></span> <span class="arrow next fa fa-chevron-circle-right" ></span> </div> </div>`;
+    const cardContents = `<div id="paginated_cards" class="cards"> <div class="cards_scroller">${cards} <span class="arrow prev fa fa-chevron-circle-left hidden "></span> <span class="arrow next fa fa-chevron-circle-right" ></span> </div> </div>`;
     return cardContents;
 }
 
@@ -52,7 +70,30 @@ function showCardsCarousel(cardsToAdd) {
         card_scroller.scrollBy(-card_item_size, 0);
     }
 
+    function toggleArrow(arrow) {
+        if (arrow.classList.contains('hidden'))
+        arrow.classList.remove('hidden');
+    }
+
+    function scrolled() {
+        const scroller = document.querySelector('.cards_scroller');
+        const leftArrow = document.querySelector('.arrow.prev')
+        const rightArrow = document.querySelector('.arrow.next')
+        if (scroller.scrollLeft < 5) {
+            leftArrow.classList.add('hidden');
+        } else {
+            leftArrow.classList.remove('hidden');
+        }
+
+        if (scroller.scrollWidth - scroller.scrollLeft == scroller.clientWidth) {
+            rightArrow.classList.add('hidden');
+        } else {
+            rightArrow.classList.remove('hidden');
+        }
+    }
+
     card.querySelector(".arrow.next").addEventListener("click", scrollToNextPage);
     card.querySelector(".arrow.prev").addEventListener("click", scrollToPrevPage);
+    document.querySelector('.cards_scroller').addEventListener('scroll', scrolled);
     $(".usrInput").focus();
 }

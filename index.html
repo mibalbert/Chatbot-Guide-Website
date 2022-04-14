@@ -1,4 +1,4 @@
-<html>
+  <html>
   <head>
     <title>Chatbot Widget</title>
 
@@ -55,10 +55,35 @@
   </head>
 
   <body>
-      <header>
-        <p>This is the header</p>
-      </header>
-      <main>
+    <header>
+      <h1 class="title">
+        <span class="title__module"><img class="logo" src="static/img/coventry.png" alt="Coventry University Logo">303COM - Individual Module</span>
+        <span class="title__author">- Alberto Paros -</span>
+      </h1>
+    </header>
+    <main>
+    
+      <h2 class="container__title">Title</h2>
+
+      <div>
+        <div class="container__item">
+          <img class="container__item-icon" src="static/img/calendar.png" alt="Schedule image">
+          <p class="container__item-text">-Schedule-</p>
+        </div>
+        <div class="container__item">
+          <p class="container__item-text">-PDF-</p>
+          <img class="container__item-icon" src="static/img/pdf.png" alt="PDF image">
+        </div>
+        <div class="container__item">
+          <img class="container__item-icon" src="static/img/clock.png" alt="Clock image">
+          <p class="container__item-text">-Clock-</p>
+        </div>
+        <div class="container__item">
+          <p class="container__item-text">-Link-</p>
+          <img class="container__item-icon" src="static/img/link.png" alt="Link image">
+        </div>
+      </div>
+
       <div class="container">
         <!-- Modal for rendering the charts, declare this if you want to render charts, 
            else you remove the modal -->
@@ -92,7 +117,7 @@
           <div class="keypad">
             <textarea
               id="userInput"
-              placeholder="Type a message bitch..."
+              placeholder="Type a message..."
               class="usrInput"
             ></textarea>
             <div id="sendButton">
