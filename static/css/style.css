@@ -133,12 +133,12 @@ main {
   padding: 2em;
   box-sizing: border-box;
   background-color: lightgray;
-  border-radius: 25px;
+  border-radius: 50px;
   background: #F4F4F4;
   padding: 20px; 
   width: 90%;
   min-height: 750px;  
-  margin-bottom: 3em;
+  margin-bottom: 11em;
   box-shadow: 20px 20px 20px rgb(255 255 255 / 80%), 
     -20px -20px 20px rgb(166 180 200 / 70%);
 }
@@ -174,7 +174,8 @@ main {
   position: fixed;
   background: #fff;
   border-radius: 10px 10px 10px 10px;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0), 0 0px 7px 0 #00000046;
+  /*4px 5px 25px rgb(166 180 200 / 70%), -9px -9px 24px rgb(166 180 200 / 70%) */ 
+   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0), 0 0px 7px 0 #00000046;
 }
 
 .chat_header {
