@@ -64,6 +64,8 @@ header {
 .container__item-text:nth-child(2n) {
   text-align: right;
   margin-right: 7rem;
+  margin-left: 220;
+  font-size: 20;
 }
 
 .container__item-icon:nth-child(2n+1) {
@@ -865,9 +867,10 @@ div.content_data::-webkit-scrollbar {
 }
 
 .chip {
-  background-color: white;
-  border: 1px solid#51D4E5;
-  color: #51D4E5;
+  background-color: #51D4E5;
+  /*border: 1px solid#51D4E5;
+  */
+  color: white;
   font-weight: bolder;
   text-align: center;
 }
