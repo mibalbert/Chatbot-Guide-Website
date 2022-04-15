@@ -63,8 +63,8 @@ header {
 
 .container__item-text:nth-child(2n) {
   text-align: right;
-  margin-right: 7rem;
-  margin-left: 220;
+  margin-right: 3rem;
+  margin-left: 240;
   font-size: 20;
 }
 
