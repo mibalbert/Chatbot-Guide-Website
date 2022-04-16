@@ -300,7 +300,7 @@ function actionTrigger() {
 // eslint-disable-next-line no-unused-vars
 function customActionTrigger() {
     $.ajax({
-        url: "https://slimy-yak-94.loca.lt/webhook/",
+        url: "https://loud-dingo-12.loca.lt/webhook/",
         type: "POST",
         contentType: "application/json",
         data: JSON.stringify({
