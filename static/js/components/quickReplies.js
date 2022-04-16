@@ -36,7 +36,7 @@ function showQuickReplies(quickRepliesData) {
         if (!isDown) return;
         e.preventDefault();
         const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 3; // scroll-fast
+        const walk = (x - startX) * 100; // scroll-fast
         slider.scrollLeft = scrollLeft - walk;
     });
 }
