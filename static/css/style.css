@@ -61,10 +61,20 @@ header {
    height: 80%;
   margin: 0;
   position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container__item-icon-center2{
+  height: 50%;
+  margin: 0;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .container__item-text-center{
   text-align: let;
   margin-left: 3rem;
@@ -162,6 +172,15 @@ header {
 
 
 .container__item-icon-center{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+
+.container__item-icon-center2{
+  height: 50%;
   margin: 0;
   position: absolute;
   top: 50%;
