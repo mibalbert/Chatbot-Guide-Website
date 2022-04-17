@@ -57,6 +57,27 @@ header {
   position: absolute;
 }
 
+.container__item-icon-center{
+   height: 80%;
+   position: absolute;
+   padding-left: 5rem;
+   padding-bottom: auto;
+}
+.container__item-text-center{
+  text-align: let;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  font-size: 20;
+}
+.container__item-text-center2{
+  text-align: let;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  font-size: 20;
+  background-color:powderblue;
+}
+
+
 .container__item-icon:nth-child(2n) {
   right: -20%;
 }
@@ -74,7 +95,9 @@ header {
 
 .container__item-text:nth-child(2n+1) {
   text-align: left;
-  margin-left: 7rem;
+  margin-left: 3rem;
+  margin-right: auto;
+  font-size: 20;
 }
 
 .container__item-text {
