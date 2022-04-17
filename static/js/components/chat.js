@@ -45,7 +45,7 @@ function setBotResponse(response) {
         hideBotTyping();
         if (response.length < 1) {
             // if there is no response from Rasa, send  fallback message to the user
-            const fallbackMsg = "Hi there :) Try typing 'help'";
+            const fallbackMsg = "Hi therer :) Try typing 'help'";
 
             const BotResponse = `<img class="botAvatar" src="./static/img/sara_avatar.png"/><p class="botMsg">${fallbackMsg}</p><div class="clearfix"></div>`;
 
@@ -306,9 +306,9 @@ function customActionTrigger() {
         data: JSON.stringify({
             next_action: action_name,
             tracker: 
-            // {
+               {
                 sender_id
-            // },
+             },
         }),
         success(botResponse, status) {
             console.log("Response from Rasa: ", botResponse, "\nStatus: ", status);
