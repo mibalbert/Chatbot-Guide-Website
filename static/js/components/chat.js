@@ -305,9 +305,10 @@ function customActionTrigger() {
         contentType: "application/json",
         data: JSON.stringify({
             next_action: action_name,
-            tracker: {
-                sender_id,
-            },
+            tracker: 
+            // {
+                sender_id
+            // },
         }),
         success(botResponse, status) {
             console.log("Response from Rasa: ", botResponse, "\nStatus: ", status);
