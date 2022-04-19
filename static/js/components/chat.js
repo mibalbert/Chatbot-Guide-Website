@@ -45,7 +45,7 @@ function setBotResponse(response) {
         hideBotTyping();
         if (response.length < 1) {
             // if there is no response from Rasa, send  fallback message to the user
-            const fallbackMsg = "Hi there :) Try typing 'help'";
+            const fallbackMsg = "I am facing some issues, please try again later!!!";
 
             const BotResponse = `<img class="botAvatar" src="./static/img/sara_avatar.png"/><p class="botMsg">${fallbackMsg}</p><div class="clearfix"></div>`;
 
@@ -300,15 +300,14 @@ function actionTrigger() {
 // eslint-disable-next-line no-unused-vars
 function customActionTrigger() {
     $.ajax({
-        url: "https://bright-panther-50.loca.lt/webhook/",
-        type: "POST"
+        url: "http://localhost:5055/webhook/",
+        type: "POST",
         contentType: "application/json",
         data: JSON.stringify({
             next_action: action_name,
-            tracker: 
-               {
+            tracker: {
                 sender_id,
-             },
+            },
         }),
         success(botResponse, status) {
             console.log("Response from Rasa: ", botResponse, "\nStatus: ", status);
