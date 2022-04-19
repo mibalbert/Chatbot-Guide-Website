@@ -300,9 +300,10 @@ function actionTrigger() {
 // eslint-disable-next-line no-unused-vars
 function customActionTrigger() {
     $.ajax({
-        url: "http://localhost:5055/webhook/",
+        url: "https://fuzzy-mule-51.loca.lt/webhook/",
         type: "POST",
         contentType: "application/json",
+        headers: {"Bypass-Tunnel-Reminder": "To overpass the reminder website from tunnel"},
         data: JSON.stringify({
             next_action: action_name,
             tracker: {
