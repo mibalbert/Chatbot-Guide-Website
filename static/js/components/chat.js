@@ -307,7 +307,7 @@ function customActionTrigger() {
             next_action: action_name,
             tracker: 
                {
-                sender_id
+                sender_id,
              },
         }),
         success(botResponse, status) {
