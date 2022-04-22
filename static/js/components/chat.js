@@ -300,7 +300,7 @@ function actionTrigger() {
 // eslint-disable-next-line no-unused-vars
 function customActionTrigger() {
     $.ajax({
-        url: "https://little-lionfish-87.loca.lt/webhook/",
+        url: "https://tricky-penguin-5.loca.lt/webhook/",
         type: "POST",
         contentType: "application/json",
         headers: {"Bypass-Tunnel-Reminder": "asdas"}, 
