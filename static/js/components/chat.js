@@ -45,7 +45,7 @@ function setBotResponse(response) {
         hideBotTyping();
         if (response.length < 1) {
             // if there is no response from Rasa, send  fallback message to the user
-            const fallbackMsg = "I am facing some issues, please try again later!!!";
+            const fallbackMsg = "Sorry, something is not runinng well, please come back later :)";
 
             const BotResponse = `<img class="botAvatar" src="./static/img/sara_avatar.png"/><p class="botMsg">${fallbackMsg}</p><div class="clearfix"></div>`;
 
@@ -300,10 +300,11 @@ function actionTrigger() {
 // eslint-disable-next-line no-unused-vars
 function customActionTrigger() {
     $.ajax({
-        url: "https://fuzzy-mule-51.loca.lt/webhook/",
+        url: "https://little-lionfish-87.loca.lt/webhook/",
         type: "POST",
         contentType: "application/json",
-        headers: {"Bypass-Tunnel-Reminder": "To overpass the reminder website from tunnel"},
+        headers: {"Bypass-Tunnel-Reminder": "asdas"}, 
+        // header: { "User-Agent":"sdadaasdasd"},
         data: JSON.stringify({
             next_action: action_name,
             tracker: {

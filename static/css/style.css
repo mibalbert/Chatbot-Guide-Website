@@ -663,7 +663,8 @@ div.content_data::-webkit-scrollbar {
 
 .suggestions {
   padding: 5px;
-  width: 80%;
+  max-width: 50%;
+  min-width: 30%;
   border-radius: 10px;
   background: #ffffff;
   box-shadow: 2px 5px 5px 1px #dbdade;
@@ -909,11 +910,12 @@ div.content_data::-webkit-scrollbar {
 
 .quickReplies {
   padding: 5px;
+  padding-left: 15px;
   position: relative;
-  width: 100%;
+  width: 70%;
   overflow-x: scroll;
   overflow-y: hidden;
-  white-space: nowrap;
+  white-space: wrap;
   transition: all 0.2s;
   transform: scale(0.98);
   will-change: transform;
