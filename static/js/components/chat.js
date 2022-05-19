@@ -300,7 +300,7 @@ function actionTrigger() {
 // eslint-disable-next-line no-unused-vars
 function customActionTrigger() {
     $.ajax({
-        url: "https://18.170.253.240:5055/webhook",
+        url: "https://ec2-18-170-253-240.eu-west-2.compute.amazonaws.com:5055/webhook",
         type: "POST",
         contentType: "application/json",
         headers: {"Bypass-Tunnel-Reminder": "overpass"}, 
