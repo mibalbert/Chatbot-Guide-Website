@@ -12,6 +12,7 @@ function include(file) {
 
 // Bot pop-up intro
 document.addEventListener("DOMContentLoaded", () => {
+  try{
   const elemsTap = document.querySelector(".tap-target");
   // eslint-disable-next-line no-undef
   const instancesTap = M.TapTarget.init(elemsTap, {});
@@ -19,6 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     instancesTap.close();
   }, 4000);
+  }catch(err){
+    console.log(err)
+  }
+
 });
 
 /* import components */
