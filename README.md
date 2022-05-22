@@ -1,2 +1,2 @@
 
-This amazing library was build upon the framework made by https://github.com/JiteshGaikwad/Chatbot-Widget
+This framework was build upon the amazing library made by https://github.com/JiteshGaikwad/Chatbot-Widget
