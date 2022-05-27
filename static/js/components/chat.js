@@ -161,6 +161,13 @@ function setBotResponse(response) {
                         return;
                     }
 
+                    // check if the custom payload type is "cardsCarousel2"
+                    if (payload === "cardsCarousel2") {
+                        const restaurantsData2 = response[i].custom.data;
+                        showCardsCarousel2(restaurantsData2);
+                        return;
+                    }
+
                     // check if the custom payload type is "chart"
                     if (payload === "chart") {
                         /**
@@ -300,7 +307,7 @@ function actionTrigger() {
 // eslint-disable-next-line no-unused-vars
 function customActionTrigger() {
     $.ajax({
-        url: "https://www.actionserverforpersonalprojects.com/webhook",
+        url: "http://localhost:5055/webhook/",
         type: "POST",
         contentType: "application/json",
         headers: {"Bypass-Tunnel-Reminder": "overpass"}, 

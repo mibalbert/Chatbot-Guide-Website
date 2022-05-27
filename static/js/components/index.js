@@ -12,6 +12,7 @@ function include(file) {
 include('./static/js/components/chat.js');
 include('./static/js/constants.js');
 include('./static/js/components/cardsCarousel.js');
+include('./static/js/components/cardsCarousel2.js');
 include('./static/js/components/botTyping.js');
 include('./static/js/components/charts.js');
 include('./static/js/components/collapsible.js');
